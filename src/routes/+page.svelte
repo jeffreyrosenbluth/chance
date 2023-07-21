@@ -32,7 +32,7 @@
 	.flex-container {
 		display: flex;
 		flex-direction: row;
-		gap: 5vw;
+		gap: 3vw;
 		margin: 1vw;
 		color: white;
 	}
@@ -52,7 +52,7 @@
 		color: white;
 		font-size: 1rem;
 		border: 2.5px solid slategray;
-		width: 12vw;
+		width: 10rem;
 	}
 
 	:global(body) {

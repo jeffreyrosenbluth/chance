@@ -16,9 +16,9 @@
 		height: 25vw;
 		font-family: Arial, Helvetica, sans-serif;
 		font-size: 1.5vw;
-		color: white;
+		color: slategray;
 		background-color: transparent;
-		border-color: white;
-		border-radius: 0.5em;
+		border-color: slategray;
+		border-radius: 0.25rem;
 	}
 </style>
