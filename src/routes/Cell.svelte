@@ -91,7 +91,9 @@
 		animation-name: ciao;
 		-webkit-animation-name: ciao;
 		transform-origin: center;
+		-webkit-transform-origin: center;
 		animation-fill-mode: both;
+		-webkit-animation-fill-mode: both;
 	}
 
 	@keyframes winner {
@@ -110,8 +112,8 @@
 		50%,
 		70%,
 		90% {
-			-webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
-			transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+			-webkit-transform: scale3d(1.25, 1.25, 1.25) rotate3d(0, 0, 1, 3deg);
+			transform: scale3d(1.25, 1.25, 1.25) rotate3d(0, 0, 1, 3deg);
 		}
 
 		40%,
@@ -143,8 +145,8 @@
 		50%,
 		70%,
 		90% {
-			-webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
-			transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+			-webkit-transform: scale3d(1.25, 1.25, 1.25) rotate3d(0, 0, 1, 3deg);
+			transform: scale3d(1.25, 1.25, 1.25) rotate3d(0, 0, 1, 3deg);
 		}
 
 		40%,
@@ -163,6 +165,8 @@
 		-webkit-animation-name: winner;
 		animation-name: winner;
 		transform-origin: center;
+		-webkit-transform-origin: center;
 		animation-fill-mode: both;
+		-webkit-animation-fill-mode: both;
 	}
 </style>
