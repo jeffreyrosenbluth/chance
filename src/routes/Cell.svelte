@@ -40,7 +40,6 @@
 		font-weight: bold;
 		font-size: 2vw;
 		height: 11vw;
-		/* height: 120px; */
 		color: white;
 		border-radius: 0.5rem;
 		animation-duration: 2s;
