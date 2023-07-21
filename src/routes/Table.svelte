@@ -32,8 +32,8 @@
 <style>
 	div {
 		display: grid;
-		grid-template-columns: repeat(4, 200px);
-		gap: 15px 10px;
-		width: 800px;
+		grid-template-columns: repeat(4, 16vw);
+		gap: 1vw 1vw;
+		width: 67vw;
 	}
 </style>

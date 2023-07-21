@@ -12,8 +12,8 @@
 
 <style>
 	textarea {
-		width: 300px;
-		height: 365px;
+		width: 25vw;
+		height: 25vw;
 		font-family: Arial, Helvetica, sans-serif;
 		font-size: 1.5vw;
 		color: white;

@@ -32,8 +32,8 @@
 	.flex-container {
 		display: flex;
 		flex-direction: row;
-		gap: 50px;
-		margin: 10px;
+		gap: 5vw;
+		margin: 1vw;
 		color: white;
 	}
 
@@ -42,17 +42,17 @@
 		font-weight: normal;
 		font-size: 4vw;
 		color: white;
-		margin: 10px;
-		width: 870px;
+		margin: 1vw;
+		width: 75vw;
 	}
 
 	button {
 		padding: 8px;
 		background-color: slategray;
 		color: white;
-		font-size: 1em;
+		font-size: 1rem;
 		border: 2.5px solid slategray;
-		width: 150px;
+		width: 12vw;
 	}
 
 	:global(body) {
