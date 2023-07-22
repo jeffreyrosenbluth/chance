@@ -9,6 +9,7 @@
 	let width = 800;
 	let height = 800;
 	const radius = 35;
+	const epsilon = 0.43;
 
 	class Ball {
 		p: p5;
@@ -80,7 +81,23 @@
 			this.p.noFill();
 			this.p.stroke(this.color);
 			this.p.strokeWeight(3);
-			this.p.ellipse(this.pos.x, this.pos.y, 2 * this.radius);
+			// this.p.ellipse(this.pos.x, this.pos.y, 2 * this.radius);
+			this.p.arc(
+				this.pos.x,
+				this.pos.y,
+				2 * this.radius,
+				2 * this.radius,
+				epsilon,
+				this.p.PI - epsilon
+			);
+			this.p.arc(
+				this.pos.x,
+				this.pos.y,
+				2 * this.radius,
+				2 * this.radius,
+				this.p.PI + epsilon,
+				-epsilon
+			);
 			this.p.fill(this.color);
 			this.p.noStroke();
 			this.p.textSize(28);
@@ -101,7 +118,7 @@
 						p5.createVector(p5.random(width), p5.random(height)),
 						p5.Vector.random2D().mult(3 + p5.random(7)),
 						radius,
-						p5.color(p5.random(255), p5.random(255), p5.random(255)),
+						p5.color(p5.random(25, 255), p5.random(25, 255), p5.random(25, 255)),
 						names[i]
 					)
 				);

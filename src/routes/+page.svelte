@@ -24,11 +24,11 @@
 
 <label>
 	<input type="radio" name="table" value={true} bind:group={table} />
-	Tradional
+	Grid
 </label>
 <label>
 	<input type="radio" name="p5js" value={false} bind:group={table} />
-	Collision
+	Space
 </label>
 
 <div class="flex-container">
@@ -78,6 +78,7 @@
 		font-family: Arial, Helvetica, sans-serif;
 		font-size: 1.7vw;
 		color: white;
+		margin: 1vw;
 	}
 
 	:global(body) {
