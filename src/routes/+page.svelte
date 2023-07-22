@@ -1,4 +1,5 @@
 <script>
+	import Balls from './Balls.svelte';
 	import Players from './Players.svelte';
 	import Table from './Table.svelte';
 
@@ -6,6 +7,8 @@
 	$: players = playersString === '' ? [] : playersString.split(',');
 
 	let started = false;
+	let table = false;
+	$: notTable = !table;
 
 	function handlePlayClick() {
 		started = !started;
@@ -19,12 +22,28 @@
 	<h1>Lottery</h1>
 </div>
 
+<label>
+	<input type="radio" name="table" value={true} bind:group={table} />
+	Tradional
+</label>
+<label>
+	<input type="radio" name="p5js" value={false} bind:group={table} />
+	Collision
+</label>
+
 <div class="flex-container">
 	<button on:click={handlePlayClick}> {buttonLabel} </button>
 </div>
 
 <div class="flex-container">
-	<div><Table names={players} {started} /></div>
+	{#if table}
+		<div><Table names={players} {started} /></div>
+	{:else if started}
+		<div><Balls names={players} /></div>
+	{:else}
+		<div><Balls names={[]} /></div>
+	{/if}
+
 	<div><Players bind:players={playersString} {show} /></div>
 </div>
 
@@ -53,6 +72,12 @@
 		font-size: 1rem;
 		border: 2.5px solid slategray;
 		width: 10rem;
+	}
+
+	label {
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 1.7vw;
+		color: white;
 	}
 
 	:global(body) {
