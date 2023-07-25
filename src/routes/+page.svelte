@@ -1,5 +1,4 @@
 <script>
-	import Balls from './Balls.svelte';
 	import Players from './Players.svelte';
 	import Table from './Table.svelte';
 
@@ -22,28 +21,12 @@
 	<h1>Lottery</h1>
 </div>
 
-<label>
-	<input type="radio" name="table" value={true} bind:group={table} />
-	Grid
-</label>
-<label>
-	<input type="radio" name="p5js" value={false} bind:group={table} />
-	Space
-</label>
-
 <div class="flex-container">
 	<button on:click={handlePlayClick}> {buttonLabel} </button>
 </div>
 
 <div class="flex-container">
-	{#if table}
-		<div><Table names={players} {started} /></div>
-	{:else if started}
-		<div><Balls names={players} /></div>
-	{:else}
-		<div><Balls names={[]} /></div>
-	{/if}
-
+	<div><Table names={players} {started} /></div>
 	<div><Players bind:players={playersString} {show} /></div>
 </div>
 
